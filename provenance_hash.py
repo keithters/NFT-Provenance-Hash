@@ -25,10 +25,9 @@ def make_hash():
     while i < imgCount:
         with open(f"{outputFolder}/{i}.{fmt}", "rb") as img:
             h = hashlib.sha256()
-            data = img.read(65536)
-            if not data:
-                break
+            data = img.read()
             h.update(data)
+
             hash = h.hexdigest()
             concatenated_str = concatenated_str + hash
             print (hash, file=rf)
