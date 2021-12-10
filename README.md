@@ -20,9 +20,9 @@ python3 provenance_hash.py
 ```
 
 Output will be a series of text files in your `outputFolder`:
-* `provenance_hash.txt` containing the provenance hash
-* `provenance_record.txt` conainting the hashes of each image in order
-* `provenanve_str` containing a concatenated string of the image hashes in order
+* `provenance_hash.txt`  - containing the 'final proof hash'
+* `provenance_record.txt`  - conainting the hashes of each image in order
+* `provenanve_str.txt`  - containing a concatenated string of the image hashes in order
 
 ---
 <!-- NOTES -->
