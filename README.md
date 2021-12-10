@@ -19,7 +19,10 @@ python3 -m pip install -r requirements.txt
 python3 provenance_hash.py
 ```
 
-Output will be a series of text files in your `outputFolder` named `0_hash.txt`, `1_hash.txt` etc..., and another called `provenance_hash.txt` containing the full concatenated hash.
+Output will be a series of text files in your `outputFolder`:
+* `provenance_hash.txt` containing the provenance hash
+* `provenance_record.txt` conainting the hashes of eash image in order
+* `provenanve_str` containing a concatenated string of the image hashes in order
 
 ---
 <!-- NOTES -->
