@@ -1,5 +1,5 @@
 # NFT Provenance Hash Generator
-Dead Simple python script to generate a Provenance hash for an NFT series. This assumes your images are named in sequence, `0.png`, `1.png`, etc. (gif, jpg etc. work as well).
+Dead Simple python script to generate an SHA256 Provenance Hash for an NFT series. This assumes your images are named in sequence, `0.png`, `1.png`, etc. (gif, jpg etc. work as well). Should be easy to hack as needed.
 
 
 1. Edit the following vars:
