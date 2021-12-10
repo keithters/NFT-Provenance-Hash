@@ -14,9 +14,11 @@ def make_hash():
     if os.path.exists(path): os.remove(path)
     f = open(path, 'a')
 
-    record_path = f"{outputFolder}/provenance_record.txt"
-    if os.path.exists(record_path): os.remove(record_path)
-    rf = open(record_path, 'a')
+    record_csv = f"{outputFolder}/provenance_record.csv"
+    if os.path.exists(record_csv): os.remove(record_csv)
+    rc = open(record_csv, 'a')
+
+    print ("File Name,SHA-256 HASH", file=rc)
 
     str_path = f"{outputFolder}/provenance_str.txt"
     if os.path.exists(str_path): os.remove(str_path)
@@ -27,10 +29,9 @@ def make_hash():
             h = hashlib.sha256()
             data = img.read()
             h.update(data)
-
             hash = h.hexdigest()
             concatenated_str = concatenated_str + hash
-            print (hash, file=rf)
+            print (f"{i}.{fmt},{hash}", file=rc)
             print (hash)
             i = i + 1
 
