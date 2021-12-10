@@ -9,12 +9,7 @@ outputFolder = "../renders"   # <-- Where are they?
 fmt          = "png"          # <-- What format / file extension?
 ```
 
-2. Make sure you have PIL
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-3. Then fire away..
+2. Then fire away..
 ```bash
 python3 provenance_hash.py
 ```

@@ -1,9 +1,7 @@
 import os
 import hashlib
-from PIL import Image
 
-
-imgCount     = 10                        # <-- How many images are there?
+imgCount     = 20                        # <-- How many images are there?
 outputFolder = "../turfmaker/renders"    # <-- Where are they?
 fmt          = "png"                     # <-- What format / file extension?
 
@@ -25,12 +23,17 @@ def make_hash():
     sf = open(str_path, 'a')
 
     while i < imgCount:
-        img = Image.open(f"{outputFolder}/{i}.{fmt}")
-        hash = hashlib.sha256(img.tobytes()).hexdigest()
-        concatenated_str = concatenated_str + hash
-        print (hash, file=rf)
-        print (hash)
-        i = i + 1
+        with open(f"{outputFolder}/{i}.{fmt}", "rb") as img:
+            h = hashlib.sha256()
+            data = img.read(65536)
+            if not data:
+                break
+            h.update(data)
+            hash = h.hexdigest()
+            concatenated_str = concatenated_str + hash
+            print (hash, file=rf)
+            print (hash)
+            i = i + 1
 
     provenance_hash = hashlib.sha256(concatenated_str.encode('utf-8')).hexdigest()
     print(f"Provenance_Hash = {provenance_hash}")
