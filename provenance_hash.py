@@ -1,8 +1,8 @@
 import os
 import hashlib
 
-imgCount     = 200                        # <-- How many images are there?
-outputFolder = "/Volumes/UNTITLED/"    # <-- Where are they?
+imgCount     = 10                        # <-- How many images are there?
+outputFolder = '/Users/keith/Documents/Development/turfmaker/renders'    # <-- Where are they?
 fmt          = "png"                     # <-- What format / file extension?
 
 def make_hash():
