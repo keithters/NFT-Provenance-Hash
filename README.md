@@ -32,6 +32,7 @@ Hashes can be verified by running any of the scripts in the `verification` folde
 
 # in javascript
 ⇒ node check_hashes.js
+
 ✅: All the individual image hashes matched!
 🖌️: Provenance Hash: 93e5b6f83de5866e22a1493736958c4eb9618a23ed6f6761d064f0b474db8cc1
 ```
